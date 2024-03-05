@@ -8,29 +8,29 @@ using Welcome.Others;
 
 namespace Welcome.Model
 {
-    internal class User
+    public class User
     {
-        private string names;
-        private string password;
-        private UserRolesEnum role;
-        private string facultyNumber;
-        private string email;
+        public string names;
+        public string password;
+        public UserRolesEnum role;
+        public string facultyNumber;
+        public string email;
        
 
-        public User(String _names, String _password, UserRolesEnum _role, string facultyNumber, string email)
+        public User(String _names, String _password, UserRolesEnum _role, String _facultyNumber, String _email)
         {
             this.names = _names;
             this.password = _password;
             this.role = _role;
-            this.facultyNumber = facultyNumber;
-            this.email = email; 
+            this.facultyNumber = _facultyNumber;
+            this.email = _email; 
         }
 
         public string Names { 
             get { return names; } 
             set { names = value; } 
         }
-        private string encryptedPassword;
+        public string encryptedPassword;
 
         public string Password
         {
@@ -44,7 +44,7 @@ namespace Welcome.Model
             }
         }
 
-        private string EncryptPassword(string password)
+        public string EncryptPassword(string password)
         {
             using (Aes aesAlg = Aes.Create())
             {
@@ -69,7 +69,7 @@ namespace Welcome.Model
             }
         }
 
-        private string DecryptPassword(string encryptedPassword)
+        public string DecryptPassword(string encryptedPassword)
         {
             using (Aes aesAlg = Aes.Create())
             {

@@ -7,9 +7,9 @@ using Welcome.Model;
 
 namespace Welcome.VIewModel
 {
-    internal class UserViewModel
+    public class UserViewModel
     {
-        private User _user;
+        public User _user;
         public UserViewModel(User user)
         {
             _user = user;

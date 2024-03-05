@@ -8,9 +8,9 @@ using Welcome.VIewModel;
 
 namespace Welcome.View
 {
-    internal class UserView
+    public class UserView
     {
-        private UserViewModel _userViewModel;
+        public UserViewModel _userViewModel;
 
         
 
@@ -26,6 +26,11 @@ namespace Welcome.View
             Console.WriteLine("Role: "+ _userViewModel.Role);
             Console.WriteLine("Faculty number: "+ _userViewModel.FacultyNumber);
             Console.WriteLine("Email: "+ _userViewModel.Email);
+        }
+
+        public Exception DisplayError()
+        {
+            throw new Exception("ТЕКСТ НА ГРЕШКАТА");
         }
 
         
