@@ -32,5 +32,15 @@ namespace Welcome.VIewModel
             get { return _user.Role; }
             set { _user.Role = value; }
         }
+        public String FacultyNumber
+        {
+            get { return _user.FacultyNumber; }
+            set { _user.FacultyNumber = value; }
+        }
+        public String Email
+        {
+            get { return _user.Email; }
+            set { _user.Email = value; }
+        }
     }
 }

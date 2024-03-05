@@ -24,6 +24,8 @@ namespace Welcome.View
             Console.WriteLine("Welcome");
             Console.WriteLine("User: "+ _userViewModel.Names);
             Console.WriteLine("Role: "+ _userViewModel.Role);
+            Console.WriteLine("Faculty number: "+ _userViewModel.FacultyNumber);
+            Console.WriteLine("Email: "+ _userViewModel.Email);
         }
 
         
