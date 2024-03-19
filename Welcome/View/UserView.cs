@@ -1,38 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Schema;
-using Welcome.VIewModel;
 
-namespace Welcome.View
+
+namespace Welcome.ViewModel
 {
     public class UserView
     {
-        public UserViewModel _userViewModel;
+        private UserViewModel _viewModel;
 
-        
-
-        public UserView(UserViewModel userViewModel)
+        public UserView(UserViewModel viewModel)
         {
-            _userViewModel = userViewModel;
+            _viewModel = viewModel;
         }
-
         public void Display()
         {
             Console.WriteLine("Welcome");
-            Console.WriteLine("User: "+ _userViewModel.Names);
-            Console.WriteLine("Role: "+ _userViewModel.Role);
-            Console.WriteLine("Faculty number: "+ _userViewModel.FacultyNumber);
-            Console.WriteLine("Email: "+ _userViewModel.Email);
+            Console.WriteLine("User: " + _viewModel.Name);
+            Console.WriteLine("Role: " + _viewModel.Role);
         }
 
-        public Exception DisplayError()
+        public void DisplayError()
         {
-            throw new Exception("ТЕКСТ НА ГРЕШКАТА");
+            throw new Exception("Exceptionn");
         }
-
-        
     }
 }

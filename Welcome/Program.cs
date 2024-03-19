@@ -1,7 +1,7 @@
 ﻿using Welcome.Model;
 using Welcome.Others;
-using Welcome.View;
-using Welcome.VIewModel;
+using Welcome.ViewModel;
+
 
 namespace Welcome
 {
@@ -10,7 +10,7 @@ namespace Welcome
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            User user = new User("Yordan Chulev", "password", UserRolesEnum.ADMIN, "121221089", "chulev3@gmail.com");
+            User user = new User("Yordan Chulev", "password", UserRolesEnum.ADMIN);
             UserViewModel userViewModel = new UserViewModel(user);
             UserView userView = new UserView(userViewModel);
             userView.Display();
